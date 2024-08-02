@@ -19,7 +19,7 @@ public class Main extends Application
         stage.setScene(gui.application_interface());
         stage.show();
 
-        Thread server_thread = new Thread((Runnable) () -> {
+        Thread server_thread = new Thread(() -> {
             Server_class server = new Server_class();
             server.initiate_connection();
             System.out.println("Server started");
@@ -28,7 +28,7 @@ public class Main extends Application
 
         Thread.sleep(1000);
 
-        Thread client_thread = new Thread((Runnable) () -> {
+        Thread client_thread = new Thread(() -> {
             Client_class client = new Client_class(gui);
             client.initiate_communication();
             System.out.println("Client started");

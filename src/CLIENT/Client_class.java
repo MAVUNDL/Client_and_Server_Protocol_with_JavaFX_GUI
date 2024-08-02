@@ -7,7 +7,7 @@ import java.io.*;
 import java.net.Socket;
 
 public class Client_class {
-    private Application_GUI gui;
+    private final Application_GUI gui;
     private Socket socket;
     private BufferedReader in;
     private PrintWriter out;
